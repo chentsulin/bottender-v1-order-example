@@ -1,52 +1,72 @@
-This project was bootstrapped with
-[Bottender](https://github.com/Yoctol/bottender) init script.
+# bottender-v1-order-example
 
-## Sending Feedback
+以 [Bottender](https://github.com/Yoctol/bottender) 實作的點餐範例，[「輕鬆揪團不求人！在 LINE 上打造屬於你的 Chatbot 揪團小幫手
+」](https://blog.yoctol.com/%E8%BC%95%E9%AC%86%E6%8F%AA%E5%9C%98%E4%B8%8D%E6%B1%82%E4%BA%BA-%E5%9C%A8-line-%E4%B8%8A%E6%89%93%E9%80%A0%E5%B1%AC%E6%96%BC%E4%BD%A0%E7%9A%84-chatbot-%E6%8F%AA%E5%9C%98%E5%B0%8F%E5%B9%AB%E6%89%8B-389641aced82)文章的範例。
 
-Always feel free to open issue to
-[Bottender](https://github.com/Yoctol/bottender/issues).
+## 支援的卡米狗指令
 
-## Folder Structure
-
-After creation, your project should look like this:
+### 開團
 
 ```
-my-bot/
-  .gitignore
-  node_modules/
-  bottender.config.js
-  index.js
-  package.json
-  README.md
-  yarn.lock
+開團
 ```
 
-### index.js
+範例：
 
-All functionalities start from here.\
-Mainly it's a server which listen on port 5000. You are encouraged to add more [event listener](https://bottender.js.org/docs/APIReference-Event?new)
-and [`Handler`](https://bottender.js.org/docs/APIReference-Handler?new) to enrich the bot.
+```
+卡米狗學說話;紅茶拿鐵;拿的動嗎?
+```
 
-See more examples, please refer to
-[Bottender examples](https://github.com/Yoctol/bottender/tree/master/examples).
+### 下訂單
 
-### bottender.config.js
+點自己想要的內容，一人限點一次
 
-The config file for the bot.\
-We suggests you to put all platform configs into this file and use it as a parameter
-of createServer.
+```
+我要<訂單內容>
+```
 
-## Available Scripts
+範例：
 
-There are two default scripts you can run:
+```
+我要珍奶
+```
 
-### `npm run dev`
+### 取消
 
-Run the bot in the development mode.\
-It will automatically restart the bot if there are any changes in `index.js`.\
-For more information, check [nodemon's repo](https://github.com/remy/nodemon)
+```
+取消
+```
 
-### `npm start`
+### 統計
 
-Run the bot without being monitored.\
-The bot won't be restarted when you change anything in `index.js`
+```
+統計
+```
+
+### 截止
+
+```
+截止
+```
+
+## Setup
+
+複製並填寫環境變數
+
+```
+cp .env.sample .env
+```
+
+## NPM Scripts
+
+### npm run dev
+
+會監控修改並重啟 Server，適合開發使用。
+
+### npm start
+
+執行 Bot Server。
+
+## License
+
+MIT © [C. T. Lin](https://github.com/chentsulin/bottender-v1-order-example)
